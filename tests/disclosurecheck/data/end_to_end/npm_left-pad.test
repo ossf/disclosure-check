@@ -3,48 +3,41 @@ pkg:npm/left-pad
   "package_url": "pkg:npm/left-pad",
   "contacts": [
     {
-      "priority": 10,
+      "priority": 45,
       "type": "email",
       "source": "npm registry (latest.maintainer)",
       "name": "westlac",
       "value": "cameron.westland@autodesk.com"
     },
     {
-      "priority": 10,
+      "priority": 45,
       "type": "email",
-      "source": "npm registry (latest.maintainer)",
+      "source": "npm registry (_npmUser),npm registry (latest.maintainer)",
       "name": "stevemao",
       "value": "maochenyan@gmail.com"
     },
     {
-      "priority": 10,
+      "priority": 45,
       "type": "email",
       "source": "npm registry (latest.maintainer)",
       "name": "sebmck",
       "value": "sebmck@gmail.com"
     },
     {
-      "priority": 15,
-      "type": "email",
-      "source": "npm registry (_npmUser)",
-      "name": "stevemao",
-      "value": "maochenyan@gmail.com"
-    },
-    {
       "priority": 100,
-      "type": "email",
+      "type": "fallback_email",
       "value": "securitylab@github.com",
-      "source": "https://securitylab.github.com/"
+      "source": "GitHub Security Lab"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://snyk.io/vulnerability-disclosure/",
       "source": "Snyk Vulnerability Disclosure Program"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://www.kb.cert.org/vuls/report/",
       "source": "CERT/CC Vulnerability Reporting Form"
     }
