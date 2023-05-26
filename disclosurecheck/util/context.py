@@ -56,12 +56,15 @@ class Context:
                     contact['priority'] = new_contact['priority']
 
                 for key in (set(contact.keys()) | set(new_contact.keys())) - set(['type', 'value', 'priority']):
-                    if key in contact:
-                        if key in new_contact:
-                            new_value = sorted(set(contact[key].split(',') + new_contact[key].split(',')))
-                            contact[key] = ','.join(new_value)
+                    if key in contact and contact[key]:
+                        if key in new_contact and new_contact[key]:
+                            new_value = sorted(set(contact.get(key, '').split(',') + new_contact.get(key, '').split(',')))
+                            new_value = list(filter(None, new_value))
+                            if new_value:
+                                contact[key] = ','.join(new_value)
                     else:
-                        contact[key] = new_contact[key]
+                        if new_contact[key]:
+                            contact[key] = new_contact[key]
 
                 return
 

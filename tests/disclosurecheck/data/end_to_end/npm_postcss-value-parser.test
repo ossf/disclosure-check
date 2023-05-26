@@ -3,13 +3,6 @@ pkg:npm/postcss-value-parser
   "package_url": "pkg:npm/postcss-value-parser",
   "contacts": [
     {
-      "priority": 35,
-      "type": "email",
-      "source": "https://raw.githubusercontent.com/trysound/postcss-value-parser/master/LICENSE",
-      "name": "Bogdan Chadkin",
-      "value": "trysound@yandex.ru"
-    },
-    {
       "priority": 45,
       "type": "email",
       "source": "npm registry (latest.maintainer)",
@@ -19,46 +12,32 @@ pkg:npm/postcss-value-parser
     {
       "priority": 45,
       "type": "email",
-      "source": "npm registry (latest.maintainer)",
+      "source": "npm registry (_npmUser),npm registry (latest.maintainer)",
       "name": "evilebottnawi",
       "value": "sheo13666q@gmail.com"
-    },
-    {
-      "priority": 45,
-      "type": "email",
-      "source": "npm registry (_npmUser)",
-      "name": "evilebottnawi",
-      "value": "sheo13666q@gmail.com"
-    },
-    {
-      "priority": 45,
-      "type": "email",
-      "source": "npm registry (latest.maintainer)",
-      "name": "trysound",
-      "value": "trysound@yandex.ru"
     },
     {
       "priority": 50,
       "type": "email",
-      "source": "npm registry (author)",
-      "name": "Bogdan Chadkin",
+      "source": "https://raw.githubusercontent.com/trysound/postcss-value-parser/master/LICENSE,npm registry (author),npm registry (latest.maintainer)",
+      "name": "Bogdan Chadkin,trysound",
       "value": "trysound@yandex.ru"
     },
     {
       "priority": 100,
-      "type": "email",
+      "type": "fallback_email",
       "value": "securitylab@github.com",
-      "source": "https://securitylab.github.com/"
+      "source": "GitHub Security Lab"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://snyk.io/vulnerability-disclosure/",
       "source": "Snyk Vulnerability Disclosure Program"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://www.kb.cert.org/vuls/report/",
       "source": "CERT/CC Vulnerability Reporting Form"
     }
