@@ -36,11 +36,11 @@ def analyze_librariesio(purl: PackageURL, context: Context):
     if res.ok:
         data = res.json()
 
-        urls = [sanitize_github_url(data.get("repository_url")),
-                sanitize_github_url(data.get('homepage'))]
+        urls = set([sanitize_github_url(data.get("repository_url")),
+                sanitize_github_url(data.get('homepage'))])
         logger.debug("Found URLs: %s", urls)
 
-        for url in set(urls):
+        for url in urls:
             if not url:
                 continue
             logger.debug("Found a URL (%s)", url)

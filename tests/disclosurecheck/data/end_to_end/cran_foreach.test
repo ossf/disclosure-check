@@ -12,30 +12,30 @@ pkg:cran/foreach
     {
       "priority": 70,
       "type": "url",
-      "value": "https://github.com/RevolutionAnalytics/foreach",
-      "source": "DESCRIPTION"
+      "value": "http://www.apache.org/licenses/",
+      "source": "https://raw.githubusercontent.com/revolutionanalytics/foreach/master/LICENSE"
     },
     {
       "priority": 70,
       "type": "url",
-      "value": "https://github.com/RevolutionAnalytics/foreach/issues",
-      "source": "DESCRIPTION"
+      "value": "http://www.apache.org/licenses/LICENSE-2.0",
+      "source": "https://raw.githubusercontent.com/revolutionanalytics/foreach/master/LICENSE"
     },
     {
       "priority": 100,
-      "type": "email",
+      "type": "fallback_email",
       "value": "securitylab@github.com",
-      "source": "https://securitylab.github.com/"
+      "source": "GitHub Security Lab"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://snyk.io/vulnerability-disclosure/",
       "source": "Snyk Vulnerability Disclosure Program"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://www.kb.cert.org/vuls/report/",
       "source": "CERT/CC Vulnerability Reporting Form"
     }

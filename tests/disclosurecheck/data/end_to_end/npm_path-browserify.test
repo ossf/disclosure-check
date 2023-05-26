@@ -12,43 +12,7 @@ pkg:npm/path-browserify
       "priority": 5,
       "type": "tidelift",
       "value": "security@tidelift.com",
-      "source": "https://github.com/browserify/.github"
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": "https://raw.githubusercontent.com/browserify/path-browserify/master/security.md"
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": null
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": "security.md"
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": "https://raw.githubusercontent.com/browserify/.github/main/SECURITY.md"
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": "https://github.com/browserify/path-browserify"
-    },
-    {
-      "priority": 5,
-      "type": "tidelift",
-      "value": "security@tidelift.com",
-      "source": "security.md"
+      "source": "https://github.com/browserify/.github,https://github.com/browserify/path-browserify,https://raw.githubusercontent.com/browserify/.github/main/SECURITY.md,https://raw.githubusercontent.com/browserify/path-browserify/master/security.md,security.md"
     },
     {
       "priority": 45,
@@ -256,14 +220,7 @@ pkg:npm/path-browserify
     {
       "priority": 45,
       "type": "email",
-      "source": "npm registry (_npmUser)",
-      "name": "goto-bus-stop",
-      "value": "renee@kooi.me"
-    },
-    {
-      "priority": 45,
-      "type": "email",
-      "source": "npm registry (latest.maintainer)",
+      "source": "npm registry (_npmUser),npm registry (latest.maintainer)",
       "name": "goto-bus-stop",
       "value": "renee@kooi.me"
     },
@@ -345,20 +302,27 @@ pkg:npm/path-browserify
       "value": "mail@substack.net"
     },
     {
-      "priority": 100,
+      "priority": 65,
       "type": "email",
-      "value": "securitylab@github.com",
-      "source": "https://securitylab.github.com/"
+      "source": "Pull requests merged by goto-bus-stop",
+      "name": "goto-bus-stop",
+      "value": "github@kooi.me"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_email",
+      "value": "securitylab@github.com",
+      "source": "GitHub Security Lab"
+    },
+    {
+      "priority": 100,
+      "type": "fallback_url",
       "value": "https://snyk.io/vulnerability-disclosure/",
       "source": "Snyk Vulnerability Disclosure Program"
     },
     {
       "priority": 100,
-      "type": "url",
+      "type": "fallback_url",
       "value": "https://www.kb.cert.org/vuls/report/",
       "source": "CERT/CC Vulnerability Reporting Form"
     }
