@@ -1,4 +1,4 @@
-FROM python:3.11-bullseye
+FROM python:3.11-bullseye@sha256:13927a8172d13b6cdc87f50bf0a38ff4eceef05262f83870c9f6474d16117687
 
 ARG OSSGADGET_VERSION="0.1.396"
 
