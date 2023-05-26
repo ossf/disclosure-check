@@ -1,4 +1,4 @@
-[![Scorecard supply-chain security](https://github.com/scovetta/disclosure-check/actions/workflows/scorecards.yml/badge.svg)](https://github.com/scovetta/disclosure-check/actions/workflows/scorecards.yml)
+[![Scorecard supply-chain security](https://github.com/ossf/disclosure-check/actions/workflows/scorecards.yml/badge.svg)](https://github.com/ossf/disclosure-check/actions/workflows/scorecards.yml)
 ![PyPI](https://img.shields.io/pypi/v/disclosurecheck)
 
 # Disclosure Check
