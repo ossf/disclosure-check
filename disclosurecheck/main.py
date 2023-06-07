@@ -139,7 +139,7 @@ class DisclosureCheck:
 
                 _type = contact.get("type")
                 c = ""
-                if _type == "email":
+                if _type in ["email", "fallback_email"]:
                     if "name" in contact and contact["name"]:
                         if "value" in contact:
                             c = f'{contact["name"]} <{contact["value"]}>'
@@ -155,7 +155,7 @@ class DisclosureCheck:
                 elif _type == "tidelift":
                     c = "Tidelift Security <security@tidelift.com>"
 
-                elif _type == "url" and "value" in contact:
+                elif _type in ["url", "fallback_url"] and "value" in contact:
                     c = contact.get("value")
 
                 elif _type == "social":
@@ -216,7 +216,7 @@ def start():
     try:
         dc.execute()
     except:
-        console.print_exception(show_locals=True)
+        rich.console.Console(stderr=True).print_exception(show_locals=True)
 
     if args.json:
         print(dc.get_results_json())
