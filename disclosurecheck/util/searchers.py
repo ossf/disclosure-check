@@ -17,6 +17,7 @@ IGNORE_URLS = [
     re.compile(r'/CHANGELOG.md$', re.IGNORECASE),
     re.compile(r'/(issues|releases|tags)$'),
     re.compile(r'github\.com/[^/]+/[^/]+/?$'),
+    re.compile(r'/license(s?)/', re.IGNORECASE),
 ]
 
 def find_contacts(url: str, text: str, context: Context, priority=25):
