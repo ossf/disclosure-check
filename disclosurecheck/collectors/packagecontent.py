@@ -47,6 +47,7 @@ def analyze_file(filename: str, context: Context) -> None:
         re.compile(r".*/security\.", re.IGNORECASE),
         re.compile(r".*\.cabal$", re.IGNORECASE),
         re.compile(r".*/DESCRIPTION$", re.IGNORECASE),
+        re.compile(r".*/setup.py$", re.IGNORECASE),
     ]
 
     if any([regex.match(filename) for regex in SEARCH_FILES]):

@@ -41,7 +41,7 @@ COMMON_SECURITY_MD_PATHS = set(
         "security.rst",
         "security.md",
         "Security.md",
-        "SECURITY.md",
+        "SECURITY.md"
     ]
 )
 COMMON_OTHER_FILE_PATHS = set(["%name%.gemspec", "Cargo.toml", "LICENSE", "composer.json"])
