@@ -2,38 +2,38 @@
 """
 Main entrypoint for the OpenSSF Vulnerability Disclosure Mechanism Detector.
 """
-import requests_cache
 import argparse
-import sys
-import logging
 import copy
 import importlib
-from rich.logging import RichHandler
+import importlib.metadata
 import json
+import logging
+import sys
 from functools import lru_cache
 from typing import Any, List
 from urllib.parse import urlparse
 
-import pkg_resources
+import requests_cache
 import rich.console
 from packageurl import PackageURL
+from rich.logging import RichHandler
 
 from disclosurecheck import collectors
-from disclosurecheck.collectors.github import analyze as analyze_github
-from disclosurecheck.collectors.librariesio import analyze_librariesio
-from disclosurecheck.collectors.packagecontent import analyze_packagecontent
-from disclosurecheck.collectors.overrides import check_for_overrides
-from disclosurecheck.collectors.ibb import analyze_ibb
-from disclosurecheck.collectors.tidelift import analyze_tidelift
-from disclosurecheck.util.normalize import clean_contacts, sanitize_github_url
-from disclosurecheck.util.context import Context
 from disclosurecheck.collectors.fallback import add_fallback_mechanisms
+from disclosurecheck.collectors.github import analyze as analyze_github
+from disclosurecheck.collectors.ibb import analyze_ibb
+from disclosurecheck.collectors.librariesio import analyze_librariesio
+from disclosurecheck.collectors.overrides import check_for_overrides
+from disclosurecheck.collectors.packagecontent import analyze_packagecontent
+from disclosurecheck.collectors.tidelift import analyze_tidelift
+from disclosurecheck.util.context import Context
+from disclosurecheck.util.normalize import clean_contacts, sanitize_github_url
 
 logger = logging.getLogger('disclosurecheck')
 logger.setLevel(logging.ERROR)
 
 console = rich.console.Console(highlight=False)
-VERSION = pkg_resources.get_distribution("disclosurecheck").version
+VERSION = importlib.metadata.version("disclosurecheck")
 
 
 class DisclosureCheck:
