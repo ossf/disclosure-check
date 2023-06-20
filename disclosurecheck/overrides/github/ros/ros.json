@@ -1,0 +1,14 @@
+{
+    "match_regex": [
+        "pkg:github\\/ros\\/ros"
+    ],
+    "action": "append",
+    "contacts": [
+        {
+            "priority": 0,
+            "type": "email",
+            "value": "security@openrobotics.org",
+            "source": "https://ros.org/reps/rep-2006.html"
+        }
+    ]
+}
