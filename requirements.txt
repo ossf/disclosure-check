@@ -38,7 +38,7 @@ termcolor==2.3.0
 tomli==2.0.1
 types-PyYAML==6.0.12.10
 types-requests==2.31.0.1
-types-urllib3==1.26.25.13
+types-urllib3==1.26.25.14
 typing_extensions==4.7.1
 uritools==4.0.1
 url-normalize==1.4.3
