@@ -35,9 +35,8 @@ def analyze_tidelift(purl: PackageURL, context: Context):
     logger.info("Searching for a Tidelift subscription.")
     url = f"https://tidelift.com/subscription/pkg/{purl.type}-{suffix}"
     logger.debug("Loading URL: [%s]", url)
-    res = requests.get(url, timeout=30)
-
-    if res.ok:
+    res = requests.get(url, timeout=30, allow_redirects=False)
+    if res.status_code == 200:
         context.add_contact(
             {
                 "priority": 5,
@@ -81,6 +80,7 @@ def analyze_tidelift(purl: PackageURL, context: Context):
                     {
                         "priority": 5,
                         "type": "tidelift",
+                        "name": "Tidelift Security",
                         "value": "security@tidelift.com",
                         "source": ','.join(tidelift_files),
                     }

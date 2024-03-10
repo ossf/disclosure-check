@@ -113,10 +113,13 @@ class DisclosureCheck:
 
         # Resources
         console.print("[bold green]Related Projects:[/bold green]")
+        has_related = False
         if self.context.related_purls:
             for related_purl in set(map(lambda s: str(s), self.context.related_purls)):
-                console.print(f"  [bold yellow]*[/bold yellow] {related_purl}")
-        else:
+                if related_purl != str(self.purl):
+                    console.print(f"  [bold yellow]*[/bold yellow] {related_purl}")
+                    has_related = True
+        if not has_related:
             console.print("  [cyan]No repositories found.[/cyan]")
 
         # Contacts

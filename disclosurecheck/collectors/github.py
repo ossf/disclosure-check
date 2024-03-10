@@ -127,19 +127,35 @@ def analyze(purl: PackageURL, context: Context) -> None:
         )
         logger.info("Found email address for repository owner: %s", repo_obj.owner.email)
 
-    # Check for private vulnerability reporting
-    url = f"https://github.com/{_org}/{_repo}/security/advisories"
+    # Check for private vulnerability reporting (REST API)
+    url = f"https://api.github.com/repos/{_org}/{_repo}/private-vulnerability-reporting"
     res = requests.get(url, timeout=30)
-    if "Report a vulnerability" in res.text:
-        context.add_contact(
-            {
-                "priority": 0,
-                "type": "github_pvr",
-                "value": f"https://github.com/{_org}/{_repo}/security/advisories/new",
-                "source": url,
-            }
-        )
-        logger.info("Private vulnerability reporting is enabled.")
+    if res.status_code == 200:
+        enabled = bool(res.json().get('enabled'))
+        if enabled:
+            context.add_contact(
+                {
+                    "priority": 0,
+                    "type": "github_pvr",
+                    "value": f"https://github.com/{_org}/{_repo}/security/advisories/new",
+                    "source": url,
+                }
+            )
+            logger.info("Private vulnerability reporting is enabled (via REST API)")
+    else:
+        # Fall back to web scraping
+        url = f"https://github.com/{_org}/{_repo}/security/advisories"
+        res = requests.get(url, timeout=30)
+        if "Report a vulnerability" in res.text:
+            context.add_contact(
+                {
+                    "priority": 0,
+                    "type": "github_pvr",
+                    "value": f"https://github.com/{_org}/{_repo}/security/advisories/new",
+                    "source": url,
+                }
+            )
+            logger.info("Private vulnerability reporting is enabled (via web scraping)")
 
     # Check for a contact in a "security.md" in a well-known place (avoid the API call to code search)
     org_purl = PackageURL(type="github", namespace=purl.namespace, name=".github")

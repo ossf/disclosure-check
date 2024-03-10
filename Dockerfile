@@ -1,6 +1,6 @@
-FROM python:3.11-bullseye@sha256:eb679a64d678b96ae0d8fabe65c3c0c567117b4d10cac1d53ade7392b5834b1b
+FROM python:3.12-bullseye
 
-ARG OSSGADGET_VERSION="0.1.406"
+ARG OSSGADGET_VERSION="0.1.422"
 
 WORKDIR /app
 

@@ -1,6 +1,6 @@
 [project]
 name = "disclosurecheck"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
   { name="Michael Scovetta", email="michael.scovetta@gmail.com" },
 ]
@@ -14,23 +14,23 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-  "packageurl-python >= 0.11.1",
-  "PyGithub >= 1.58.1",
-  "requests >= 2.28.2",
-  "requests-cache >= 1.0.1",
-  "urllib3 >= 1.26.15",
-  "urlextract",
-  "PyYAML >= 6.0",
-  "rich",
-  "validators >= 0.20.0",
-  "beautifulsoup4 >= 4.12.2",
+  "packageurl-python >= 0.14.0",
+  "PyGithub >= 2.2.0",
+  "requests >= 2.31.0",
+  "requests-cache >= 1.2.0",
+  "urllib3 >= 2.2.1",
+  "urlextract >= 1.9.0",
+  "PyYAML >= 6.0.1",
+  "rich >= 13.7.1",
+  "validators >= 0.22.0",
+  "beautifulsoup4 >= 4.12.3",
 ]
 
 license = {file = "LICENSE"}
 
 [project.urls]
-"Homepage" = "https://github.com/scovetta/disclosure-check"
-"Bug Tracker" = "https://github.com/scovetta/disclosure-check/issues"
+"Homepage" = "https://github.com/ossf/disclosure-check"
+"Bug Tracker" = "https://github.com/ossf/disclosure-check/issues"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
