@@ -36,7 +36,7 @@ six==1.16.0
 soupsieve==2.5
 termcolor==2.4.0
 tomli==2.0.1
-types-PyYAML==6.0.12.12
+types-PyYAML==6.0.12.20240311
 types-requests==2.31.0.20240310
 types-urllib3==1.26.25.14
 typing_extensions==4.10.0
