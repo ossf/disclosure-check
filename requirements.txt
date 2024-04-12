@@ -13,7 +13,7 @@ decorator==5.1.1
 Deprecated==1.2.14
 exceptiongroup==1.2.0
 filelock==3.13.1
-idna==3.6
+idna==3.7
 markdown-it-py==3.0.0
 mdurl==0.1.2
 mypy==1.9.0
